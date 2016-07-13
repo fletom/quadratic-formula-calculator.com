@@ -1,105 +1,71 @@
 body {
 	background-color: #FFF;
-	margin: 0;
+	color: #333;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 300;
+	text-align: center;
 	font-size: 15px;
 }
 
-.math {
-	font-weight: normal;
-	/*font-family: "Georgia", "Times New Roman", serif;*/
-}
-
-a {
-	text-decoration: none;
-}
-
-#wrapper {
-	width: 800px;
-	margin: 0 auto;
-	padding: 10px;
-}
-
-#calculator {
-	font-size: 21px;
-	overflow: visible;
-}
-
-#input {
-	width: 340px;
-}
-
-#implies {
-	width: 20px;
-	text-align: center;
-}
-
-#result {
-	width: 420px;
-	text-align: right;
-}
-
-#footer {
-	font-size: 8pt;
-	color: #999;
-	text-align: center;
-}
-#footer a {
-	color: #666;
+@media (min-width: 650px) {
+	body {
+		font-size: 22px;
+	}
 }
 
 h1 {
-	margin-top: 0;
+	font-size: 1.7em;
+	font-weight: bold;
 }
 
-p {
-	margin: 0;
-	line-height: 1.5em;
-	color: #222;
-	text-align: justify;
+#calculator {
+	font-family: monospace;
 }
 
-p.quad_form_image {
-	text-align: center;
-}
-
-.number {
+#calculator input {
 	outline: none;
 	border: 1px solid #CCC;
-	margin: 3px;
-	font-size: inherit;
-	height: 24px;
+	border-radius: 0; /* iOS Safari gives inputs rounded corners*/
 }
 
-.number.input {
-	width: 55px;
+#calculator input:invalid {
+	border-color: #F00;
 }
 
-.number.result {
-	width: 165px;
-}
-.number.result.small {
-	font-size: 14px;
+.input {
+	width: 1ch;
 }
 
-.number.input:focus, .number.input:hover {
+.input:focus, .input:hover {
 	outline: none;
 	border: 1px solid #000;
 }
 
-.number.error {
-	border-color: #F00 !important;
+/* hide the weird little up/down ticks on number fields in some browsers */
+input[type='number'] {
+	-moz-appearance:textfield;
 }
 
-.float_left {
-	float: left;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
 }
 
-.float_right {
-	float: right;
+#implies {
+	font-size: 1.6em;
+	margin: 10px;
 }
 
-.clear_both {
-	clear: both;
+.result {
+	width: 6ch;
+}
+
+#footer {
+	font-size: 11px;
+	color: #999;
+	margin: 25px;
+}
+#footer a {
+	color: #666;
+	text-decoration: none;
 }
